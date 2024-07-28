@@ -6,7 +6,7 @@ import com.github.hugobor.gof_blapu_spring.model.Pessoa;
 
 public interface PessoaService {
 	
-	List<Pessoa> buscaTodos();
+	Iterable<Pessoa> buscaTodos();
 	
 	Pessoa buscaPorId(Long id);
 	

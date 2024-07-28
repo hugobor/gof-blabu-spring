@@ -25,7 +25,7 @@ public class PessoaRestController {
 
 
 	@GetMapping
-	public ResponseEntity<List<Pessoa>> buscarTodos() {
+	public ResponseEntity<Iterable<Pessoa>> buscarTodos() {
 		return ResponseEntity.ok(pessoaService.buscaTodos());
 	}
 
