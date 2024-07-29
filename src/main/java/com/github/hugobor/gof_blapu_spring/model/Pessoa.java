@@ -6,9 +6,17 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
 
 @Entity
 public class Pessoa {
+	
+	@Repository
+	public static interface PessoaRepository extends CrudRepository<Pessoa, Long> {
+	}
+
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
